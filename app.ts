@@ -13,100 +13,99 @@
 // });
 
 {
-    let age: number
-    age = 50;
+  let age: number;
+  age = 50;
 
-    let name: string;
-    name = 'Max';
-    
-    let toggle: boolean;
-    toggle = true;
+  let name: string;
+  name = 'Max';
 
-    let empty: null;
-    empty = null;
+  let toggle: boolean;
+  toggle = true;
 
-    let notInitialize: undefined
-    notInitialize = undefined;
-    
-    let callback: (a: number) => number;
-    callback = (a) => { return 100 + a };
+  let empty: null;
+  empty = null;
 
-    let anything: any;
-    anything= -20;
-    anything = 'Text';
-    anything = {};
+  let notInitialize: undefined;
+  notInitialize = undefined;
 
+  let callback: (a: number) => number;
+  callback = a => {
+    return 100 + a;
+  };
 
-    let some:unknown;
-    some = 'Text';
-    let str: string;
-    if (typeof some === 'string') {
-        str = some;
-    }
+  let anything: any;
+  anything = -20;
+  anything = 'Text';
+  anything = {};
 
-    let person: [string, number]
-    person = ['Max', 21];
+  let some: unknown;
+  some = 'Text';
+  let str: string;
+  if (typeof some === 'string') {
+    str = some;
+  }
 
-    enum Load {LOADING, READY};
-    
-    const page = {
+  let person: [string, number];
+  person = ['Max', 21];
+
+  enum Load {
+    LOADING,
+    READY,
+  }
+
+  const page = {
     load: Load.LOADING,
-    }
+  };
 
-    if (page.load === Load.LOADING) {
-  console.log('Страница загружается');
-}
-if (page.load === Load.READY) {
-  console.log('Страница загружена');
-}
-    
-    let union: number | string;
-
-    let literal: 'enable' | 'disable';
-
-
-
-    function showMessage(message:string): void {
-  console.log(message);
-}
-
-
-function calc(num1:number, num2:number): number {
-  return num1 + num2;
-}
-
-function customError():never {
-  throw new Error('Error');
-    }
-    
-
-    type DatabasePage =  {
-  title: string;
-  likes: number;
-        accounts: string[];
-  status: 'open' | 'close';
-  details?: {
-    createAt: string;
-     updateAt: string;
+  if (page.load === Load.LOADING) {
+    console.log('Страница загружается');
   }
-}
-
-    const page1: DatabasePage = {
-  title: 'The awesome page',
-  likes: 100,
-  accounts: ['Max', 'Anton', 'Nikita'],
-  status: 'open',
-  details: {
-    createAt: '2021-01-01',
-    updateAt: '2021-05-01',
+  if (page.load === Load.READY) {
+    console.log('Страница загружена');
   }
-}
 
-const page2: DatabasePage = {
-  title: 'Python or Js',
-  likes: 5,
-  accounts: ['Alex'],
-  status: 'close',
-}
-}
+  let union: number | string;
 
+  let literal: 'enable' | 'disable';
+
+  function showMessage(message: string): void {
+    console.log(message);
+  }
+
+  function calc(num1: number, num2: number): number {
+    return num1 + num2;
+  }
+
+  function customError(): never {
+    throw new Error('Error');
+  }
+
+  type DatabasePage = {
+    title: string;
+    likes: number;
+    accounts: string[];
+    status: 'open' | 'close';
+    details?: {
+      createAt: string;
+      updateAt: string;
+    };
+  };
+
+  const page1: DatabasePage = {
+    title: 'The awesome page',
+    likes: 100,
+    accounts: ['Max', 'Anton', 'Nikita'],
+    status: 'open',
+    details: {
+      createAt: '2021-01-01',
+      updateAt: '2021-05-01',
+    },
+  };
+
+  const page2: DatabasePage = {
+    title: 'Python or Js',
+    likes: 5,
+    accounts: ['Alex'],
+    status: 'close',
+  };
+}
